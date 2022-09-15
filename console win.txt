@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>TK</title>
+</head>
+<body>
+<form id="formulario" onsubmit="leerValo()">
+  <label for="iemail">Email:</label>
+   <input id="iemail" type="email" name="email"><br>
+  <label for="ipass">Password:</label>
+   <input id="ipass" type="password" name="password"> <br>
+  <input type="submit">
+</form>
+<p id="resultado"></p>
+<script>
+  function leerValo(){
+  let formulario = document.getElementById('formulario');
+  let resultado='';
+  for (let i = 0; i < formulario.length; i++){
+  if (formulario.elements[i].value != 'submit')
+  resultado += formulario.elements[i].value;
+  }
+  document.getElementById('resultado').textContent = resultado;
+
+   console.log(resultado);
+  }
+</script>
+</body>
+</html>
