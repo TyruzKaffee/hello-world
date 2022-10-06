@@ -1,0 +1,15 @@
+.tk_color{
+    color: #375e97 ;
+}
+.tk_kolor{
+    color:  #999999;
+}
+.tk_caja{
+    width: 600px; 
+    height: 600px;
+    border: 1px solid blue;
+  padding: .5em;
+}
+.tk_links{
+    color: #fb6542;
+}
