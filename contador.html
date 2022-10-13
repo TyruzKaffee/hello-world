@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>TK</title>
+    <link rel="stylesheet" type="text/css" href="conestilo.css">
+    <style>
+        h1 {text-align: center;}
+        label{font-size: 10px;}
+    </style>
+</head>
+<body style="color:white">
+    
+    <div class="tk_caja">
+    <h1 style="font-family:arial">Contador de letras</h1>
+<h6>
+  <label for="itext" style="font-family:arial">cadena de texto:</label>
+</h6>
+<br>
+<input type="button" id="lname" value="aaaiiaabb">
+<button class="tk_boton" type="button" onclick="document.getElementById('lname').style.display='block'"></button>
+<button class="tk_boton" type="button" onclick="document.getElementById('demo').style.display='block'">Calcular</button>
+<button  class="tk_botton" type="button" onclick="document.getElementById('demo').style.display='none'">Limpiar</button>
+<p id="demo" style="display:none">
+    Letras
+    <br>
+    a: 5
+    <br>
+    i: 3
+    <br>
+    b: 2
+</p>
+</body>
+</html>
