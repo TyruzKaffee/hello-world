@@ -90,10 +90,68 @@ function maxt(){
       document.getElementsByClassName("grid-item")[40].setAttribute("style","background-color: Yellow;")
 
     }
-    
+     //decimo piso
+     if(document.getElementsByClassName("grid-item")[49].textContent>document.getElementsByClassName("grid-item")[50].textContent){
+        max= parseInt(max)+parseInt(document.getElementsByClassName("grid-item")[49].textContent);
+        document.getElementsByClassName("grid-item")[49].setAttribute("style","background-color: Yellow;")
+
+    }else{
+       max=parseInt(max)+parseInt(document.getElementsByClassName("grid-item")[50].textContent);
+       document.getElementsByClassName("grid-item")[50].setAttribute("style","background-color: Yellow;")
+    }
+     //onceavo piso
+     if(document.getElementsByClassName("grid-item")[59].textContent>document.getElementsByClassName("grid-item")[60].textContent){
+        max= parseInt(max)+parseInt(document.getElementsByClassName("grid-item")[59].textContent);
+        document.getElementsByClassName("grid-item")[59].setAttribute("style","background-color: Yellow;")
+
+    }else{
+       max=parseInt(max)+parseInt(document.getElementsByClassName("grid-item")[60].textContent);
+       document.getElementsByClassName("grid-item")[60].setAttribute("style","background-color: Yellow;")
+
+     
+    }
+     //duodecimo piso
+     if(document.getElementsByClassName("grid-item")[71].textContent>document.getElementsByClassName("grid-item")[72].textContent){
+        max= parseInt(max)+parseInt(document.getElementsByClassName("grid-item")[71].textContent);
+        document.getElementsByClassName("grid-item")[71].setAttribute("style","background-color: Yellow;")
+
+    }else{
+       max=parseInt(max)+parseInt(document.getElementsByClassName("grid-item")[72].textContent);
+       document.getElementsByClassName("grid-item")[72].setAttribute("style","background-color: Yellow;")
+
+     
+    }
+     //decimotercero piso
+     if(document.getElementsByClassName("grid-item")[84].textContent>document.getElementsByClassName("grid-item")[85].textContent){
+        max= parseInt(max)+parseInt(document.getElementsByClassName("grid-item")[84].textContent);
+        document.getElementsByClassName("grid-item")[84].setAttribute("style","background-color: Yellow;")
+
+    }else{
+       max=parseInt(max)+parseInt(document.getElementsByClassName("grid-item")[85].textContent);
+       document.getElementsByClassName("grid-item")[85].setAttribute("style","background-color: Yellow;")
 
     }
+    //decimocuarto piso
+    if(document.getElementsByClassName("grid-item")[97].textContent>document.getElementsByClassName("grid-item")[98].textContent){
+       max= parseInt(max)+parseInt(document.getElementsByClassName("grid-item")[97].textContent);
+       document.getElementsByClassName("grid-item")[97].setAttribute("style","background-color: Yellow;")
 
-     //alert("maximo hasta el 3 piso: "+max); 
+   }else{
+      max=parseInt(max)+parseInt(document.getElementsByClassName("grid-item")[98].textContent);
+      document.getElementsByClassName("grid-item")[98].setAttribute("style","background-color: Yellow;")
+
+    
+    }
+    //decimoquinto piso
+    if(document.getElementsByClassName("grid-item")[111].textContent>document.getElementsByClassName("grid-item")[112].textContent){
+       max= parseInt(max)+parseInt(document.getElementsByClassName("grid-item")[111].textContent);
+       document.getElementsByClassName("grid-item")[111].setAttribute("style","background-color: Yellow;")
+
+   }else{
+      max=parseInt(max)+parseInt(document.getElementsByClassName("grid-item")[112].textContent);
+      document.getElementsByClassName("grid-item")[112].setAttribute("style","background-color: Yellow;")
+   }
+
+     //alert("todos los pisos listos: "+max); 
      document.getElementById("T").setAttribute("value",max); 
 }
