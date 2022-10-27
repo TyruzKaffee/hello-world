@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="NStyle.css">
+<title>javascript</title>
+<script src="FPstyle.js"></script>
+</head>
+<body>
+<h1 id="T1">Piramide
+    <br>
+    calcular la ruta más pesada
+    <br>
+</h1>
+<input type="button" class="input" onclick="maxt()" name="Btn1" value="Calcular">
+<input type="button" class="input" onclick="location.reload();" name="Btn2" value="Reload">
+
+<div id="span">
+<div class="grid-container" style="margin-left: 49%;" >
+    <div class="grid-item" id="C1-1">75</div>
+  </div>
+  <div class="grid-container" style="margin-left: 47%;">
+    <div class="grid-item" id="C2-1">95</div>
+    <div class="grid-item" id="C2-2">64</div>
+  </div>
+  <div class="grid-container" style="margin-left: 44%;">
+    <div class="grid-item" id="C3-1">17</div>
+    <div class="grid-item"id="C3-2">47</div>
+    <div class="grid-item" id="C3-3">82</div>
+  </div>
+  <div class="grid-container" style="margin-left: 42%;">
+    <div class="grid-item" id="C4-1">18</div>
+    <div class="grid-item"id="C4-2">35</div>
+    <div class="grid-item" id="C4-3">87</div>
+    <div class="grid-item" id="C4-4">10</div>
+  </div>
+  <div class="grid-container" style="margin-left: 39%;">
+    <div class="grid-item" id="C5-1">20</div>
+    <div class="grid-item"id="C5-2">04</div>
+    <div class="grid-item" id="C5-3">82</div>
+    <div class="grid-item" id="C5-4">47</div>
+    <div class="grid-item" id="C5-5">65</div>
+  </div>
+  <div class="grid-container" style="margin-left: 36%;">
+    <div class="grid-item" id="C6-1">19</div>
+    <div class="grid-item" id="C6-2">01</div>
+    <div class="grid-item" id="C6-3">23</div>
+    <div class="grid-item" id="C6-4">75</div>
+    <div class="grid-item" id="C6-5">03</div>
+    <div class="grid-item" id="C6-6">34</div>
+  </div>
+  <div class="grid-container" style="margin-left: 33%;">
+    <div class="grid-item" id="C7-1">88</div>
+    <div class="grid-item" id="C7-2">02</div>
+    <div class="grid-item" id="C7-3">77</div>
+    <div class="grid-item" id="C7-4">73</div>
+    <div class="grid-item" id="C7-5">07</div>
+    <div class="grid-item" id="C7-6">63</div>
+    <div class="grid-item" id="C7-7">67</div>
+  </div>
+  <div class="grid-container" style="margin-left: 30%;">
+    <div class="grid-item" id="C8-1">99</div>
+    <div class="grid-item" id="C8-2">65</div>
+    <div class="grid-item" id="C8-3">04</div>
+    <div class="grid-item" id="C8-4">28</div>
+    <div class="grid-item" id="C8-5">06</div>
+    <div class="grid-item" id="C8-6">16</div>
+    <div class="grid-item" id="C8-7">70</div>
+    <div class="grid-item" id="C8-8">33</div>
+  </div>
+  <div class="grid-container" style="margin-left: 27%;">
+    <div class="grid-item" id="C9-1">41</div>
+    <div class="grid-item" id="C9-2">41</div>
+    <div class="grid-item" id="C9-3">26</div>
+    <div class="grid-item" id="C9-4">56</div>
+    <div class="grid-item" id="C9-5">83</div>
+    <div class="grid-item" id="C9-6">40</div>
+    <div class="grid-item" id="C9-7">80</div>
+    <div class="grid-item" id="C9-8">70</div>
+    <div class="grid-item" id="C9-9">33</div>
+  </div> 
+  <div class="grid-container" style="margin-left: 24%;">
+    <div class="grid-item" id="C10-1">41</div>
+    <div class="grid-item" id="C10-2">48</div>
+    <div class="grid-item" id="C10-3">72</div>
+    <div class="grid-item" id="C10-4">33</div>
+    <div class="grid-item" id="C10-5">47</div>
+    <div class="grid-item" id="C10-6">32</div>
+    <div class="grid-item" id="C10-7">37</div>
+    <div class="grid-item" id="C10-8">16</div>
+    <div class="grid-item" id="C10-9">94</div>
+    <div class="grid-item" id="C10-10">29</div>
+  </div>
+  <div class="grid-container" style="margin-left: 21%;">
+    <div class="grid-item" id="C11-1">53</div>
+    <div class="grid-item" id="C11-2">71</div>
+    <div class="grid-item" id="C11-3">44</div>
+    <div class="grid-item" id="C11-4">65</div>
+    <div class="grid-item" id="C11-5">25</div>
+    <div class="grid-item" id="C11-6">43</div>
+    <div class="grid-item" id="C11-7">91</div>
+    <div class="grid-item" id="C11-8">52</div>
+    <div class="grid-item" id="C11-9">97</div>
+    <div class="grid-item" id="C11-10">51</div>
+    <div class="grid-item" id="C11-11">14</div>
+  </div>
+  <div class="grid-container" style="margin-left: 18%;">
+    <div class="grid-item" id="C12-1">70</div>
+    <div class="grid-item" id="C12-2">11</div>
+    <div class="grid-item" id="C12-3">33</div>
+    <div class="grid-item" id="C12-4">28</div>
+    <div class="grid-item" id="C12-5">77</div>
+    <div class="grid-item" id="C12-6">73</div>
+    <div class="grid-item" id="C12-7">17</div>
+    <div class="grid-item" id="C12-8">78</div>
+    <div class="grid-item" id="C12-9">39</div>
+    <div class="grid-item" id="C12-10">68</div>
+    <div class="grid-item" id="C12-11">17</div>
+    <div class="grid-item" id="C12-12">57</div>
+  </div>
+  <div class="grid-container" style="margin-left: 15%;">
+    <div class="grid-item" id="C13-1" >91</div>
+    <div class="grid-item" id="C13-2">71</div>
+    <div class="grid-item" id="C13-3">52</div>
+    <div class="grid-item" id="C13-4">38</div>
+    <div class="grid-item" id="C13-5">17</div>
+    <div class="grid-item" id="C13-6">14</div>
+    <div class="grid-item" id="C13-7">91</div>
+    <div class="grid-item" id="C13-8">43</div>
+    <div class="grid-item" id="C13-9">58</div>
+    <div class="grid-item" id="C13-10">50</div>
+    <div class="grid-item" id="C13-11">27</div>
+    <div class="grid-item" id="C13-12">29</div>
+    <div class="grid-item" id="C13-12">48</div>
+  </div>
+  <div class="grid-container" style="margin-left: 12%;">
+    <div class="grid-item" id="C14-1">63</div>
+    <div class="grid-item" id="C14-2">66</div>
+    <div class="grid-item" id="C14-3">04</div>
+    <div class="grid-item" id="C14-4">68</div>
+    <div class="grid-item" id="C14-5">89</div>
+    <div class="grid-item" id="C14-6">53</div>
+    <div class="grid-item" id="C14-7">67</div>
+    <div class="grid-item" id="C14-8">30</div>
+    <div class="grid-item" id="C14-9">73</div>
+    <div class="grid-item" id="C14-10">16</div>
+    <div class="grid-item" id="C14-11">69</div>
+    <div class="grid-item" id="C14-12">87</div>
+    <div class="grid-item" id="C14-13">40</div>
+    <div class="grid-item" id="C14-14">31</div>
+ 
+  </div>
+  <div class="grid-container" style="margin-left: 9%;">
+    <div class="grid-item" id="C15-1">04</div>
+    <div class="grid-item" id="C15-2">62</div>
+    <div class="grid-item" id="C15-3">98</div>
+    <div class="grid-item" id="C15-4">27</div>
+    <div class="grid-item" id="C15-5">23</div>
+    <div class="grid-item" id="C15-6">09</div>
+    <div class="grid-item" id="C15-7">70</div>
+    <div class="grid-item" id="C15-8">98</div>
+    <div class="grid-item" id="C15-9">73</div>
+    <div class="grid-item" id="C15-10">93</div>
+    <div class="grid-item" id="C15-11">38</div>
+    <div class="grid-item" id="C15-12">53</div>
+    <div class="grid-item" id="C15-13">60</div>
+    <div class="grid-item" id="C15-14">04</div>
+    <div class="grid-item" id="C15-15">23</div>   
+
+  </div>
+  <h2>Total:<input type="text" id="T" style="font-size:23px ;"></h2>
+</div>
+</body>
+</html>
