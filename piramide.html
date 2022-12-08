@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pirámide</title>
+
+    <!-- Estilos para dar forma de pirámide a la tabla -->
+    <style>
+      table.pyramid {
+        border-spacing: 0;
+        border-collapse: collapse;
+      }
+
+      table.pyramid td {
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        border: 1px solid black;
+      }
+
+      table.pyramid tr:nth-child(odd) td:nth-child(even),
+      table.pyramid tr:nth-child(even) td:nth-child(odd) {
+        background-color: lightgray;
+      }
+    </style>
+  </head>
+  <Body>
+    <form id="pyramidForm">
+      <label for="pyramidSize">
+        Tamaño de la pirámide:
+        <input type="number" id="pyramidSize" />
+      </label>
+
+      <label for="pyramid">
+        Números de la pirámide:
+        <input type="text" id="pyramid" />
+      </label>
+
+      <input type="submit" value="Enviar" />
+    </form>
+
+    <!-- Script que procesa los datos de la pirámide -->
+    <script>
+      const pyramidForm = document.getElementById('pyramidForm');
+
+      pyramidForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const pyramidSize = document.getElementById('pyramidSize').value;
+        const pyramid = document.getElementById('pyramid').value;
+
+        // Crea una sesión de Apache Spark SQL
+        const spark = SparkSession
+          .builder()
+          .appName('PyramidApp')
+          .getOrCreate();
+
+        // Almacena los datos de la pirámide en un DataFrame de Apache Spark
+        const pyramidDF = spark.createDataFrame(pyramid, ['Numbers']);
+
+        // Realiza alguna operación con los datos de la pirámide, como por ejemplo,
+        // calcular la suma de todos los números de la pirámide
+        const pyramidTotal = pyramidDF.select(pyramidDF.col('Numbers').sum());
+
+        // Cierra la sesión de Apache Spark SQL
+        spark.stop();
+      });
+    </script>
+  </Body>
+</html>
