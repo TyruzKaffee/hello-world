@@ -1,0 +1,60 @@
+.pyramid {
+  display: -ms-grid;
+    display: grid;
+    -webkit-column-gap: 5px;
+            column-gap: 5px;
+    text-align: center;
+}
+
+.pyramid td {
+  width: 40px;
+  border: 3px solid #F36A5F  ;
+  display: inline-block;
+  line-height: 40px;
+  height: 40px;
+}
+
+.pathCell {
+  background-color: yellow;
+}
+
+.boxBoton{
+  border:1px solid #0D0E0E ;
+  background-color: #5C615E  ;
+  color: white;
+  padding: 5px 8px;
+  font-size: 25px;
+  font-family: monospace;
+  border-radius: 10px;
+}
+
+.boxBack{
+  background:#17202A;
+  color: #fff;
+  width: 250px;
+  padding: 50px;
+  border-radius: 15px;
+  text-align: left;
+}
+
+.resultGenerate {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #3498db;
+}
+
+.box{
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 0 5px;
+  text-align: center;
+  line-height: 40px;
+  background-color: #AFA9A9 ; 
+  color: #fff; 
+  border: 1px solid #000000
+}
+
+.sumBox {
+  margin-top: 10px;
+}
